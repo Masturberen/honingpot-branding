@@ -1,5 +1,75 @@
+/* =========================
+   Honingpot Jellyfin Branding
+   Works with Jamfin
+   ========================= */
+
+/* DEBUG (mag je later weghalen)
 body {
-  outline: 10px solid red !important;
+  outline: 5px solid lime !important;
+}
+*/
+
+/* Verberg alle standaard Jellyfin / Jamfin logo's */
+img[src*="jellyfin"],
+.headerLogo,
+.pageTitleWithLogo img,
+.headerLogoImage {
+  display: none !important;
 }
 
+/* HEADER LOGO (DESKTOP) */
+.headerLeft {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  padding-left: 160px;
+  min-height: 48px;
+}
 
+/* LIGHT MODE */
+.skin-light .headerLeft {
+  background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-light.png");
+}
+
+/* DARK MODE */
+.skin-dark .headerLeft {
+  background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-dark.png");
+}
+
+/* LOGIN PAGINA */
+.loginPage .logoContainer img {
+  display: none !important;
+}
+
+.skin-light .loginPage .logoContainer {
+  background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-light.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.skin-dark .loginPage .logoContainer {
+  background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-dark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* SIDEBAR (MOBIEL / TABLET) */
+.navDrawerHeader img {
+  display: none !important;
+}
+
+.skin-light .navDrawerHeader {
+  background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-light.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.skin-dark .navDrawerHeader {
+  background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-dark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
