@@ -1,18 +1,28 @@
 /* =================================
-   Honingpot Branding – Jamfin FIX
+   Honingpot Branding – Jamfin FINAL
    ================================= */
 
-/* Force override Jamfin header */
-.skin-light .headerLeft,
-.skin-dark .headerLeft {
-  background-image: none !important;
+/* 1️⃣ Verberg Jamfin logo (SVG + tekst) */
+.headerLogo,
+.headerLogo svg,
+.headerLogo span,
+.headerLogoText {
+  display: none !important;
 }
 
-/* Inject custom logo */
-.skin-light .headerLeft::before,
-.skin-dark .headerLeft::before {
+/* 2️⃣ Maak ruimte in header */
+.headerLeft {
+  position: relative;
+  padding-left: 180px !important;
+}
+
+/* 3️⃣ Inject custom logo */
+.headerLeft::before {
   content: "";
-  display: block;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 160px;
   height: 48px;
   background-repeat: no-repeat;
@@ -20,27 +30,23 @@
   background-position: left center;
 }
 
-/* Light logo */
+/* Light mode logo */
 .skin-light .headerLeft::before {
   background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-light.png");
 }
 
-/* Dark logo */
+/* Dark mode logo */
 .skin-dark .headerLeft::before {
   background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-dark.png");
 }
 
-/* Verberg Jamfin/Jellyfin image-logo’s */
-.headerLeft img,
-.headerLogo,
-.headerLogoImage,
-.pageTitleWithLogo img {
+/* 4️⃣ Login page */
+.loginPage .logoContainer svg,
+.loginPage .logoContainer span {
   display: none !important;
 }
 
-/* Login screen */
-.skin-light .loginPage .logoContainer::before,
-.skin-dark .loginPage .logoContainer::before {
+.loginPage .logoContainer::before {
   content: "";
   display: block;
   width: 220px;
@@ -59,13 +65,13 @@
   background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-dark.png");
 }
 
-.loginPage .logoContainer img {
+/* 5️⃣ Sidebar (mobile/tablet) */
+.navDrawerHeader svg,
+.navDrawerHeader span {
   display: none !important;
 }
 
-/* Sidebar (mobile/tablet) */
-.skin-light .navDrawerHeader::before,
-.skin-dark .navDrawerHeader::before {
+.navDrawerHeader::before {
   content: "";
   display: block;
   height: 60px;
@@ -80,8 +86,4 @@
 
 .skin-dark .navDrawerHeader::before {
   background-image: url("https://cdn.jsdelivr.net/gh/Masturberen/honingpot-branding@main/logo-dark.png");
-}
-
-.navDrawerHeader img {
-  display: none !important;
 }
