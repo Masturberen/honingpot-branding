@@ -1,0 +1,44 @@
+/* =========================
+   Jellyfin Custom Branding
+   ========================= */
+
+/* Verberg standaard Jellyfin logo's */
+img[src*="jellyfin"],
+.headerLogo,
+.pageTitleWithLogo img {
+  display: none !important;
+}
+
+/* Header logo (desktop) */
+.layout-desktop .headerLeft {
+  background-image: url("https://raw.githubusercontent.com/JOUWNAAM/jellyfin-branding/main/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  padding-left: 160px;
+  min-height: 48px;
+}
+
+/* Login pagina */
+.loginPage .logoContainer {
+  background-image: url("https://raw.githubusercontent.com/JOUWNAAM/jellyfin-branding/main/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.loginPage .logoContainer img {
+  display: none !important;
+}
+
+/* Sidebar (mobiel/tablet) */
+.navDrawerHeader {
+  background-image: url("https://raw.githubusercontent.com/JOUWNAAM/jellyfin-branding/main/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.navDrawerHeader img {
+  display: none !important;
+}
