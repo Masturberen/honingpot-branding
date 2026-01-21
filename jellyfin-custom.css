@@ -2,6 +2,10 @@
    Jellyfin Custom Branding
    ========================= */
 
+body {
+  outline: 10px solid red !important;
+}
+
 /* Verberg standaard Jellyfin logo's */
 img[src*="jellyfin"],
 .headerLogo,
