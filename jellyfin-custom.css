@@ -11,7 +11,7 @@ img[src*="jellyfin"],
 
 /* Header logo (desktop) */
 .layout-desktop .headerLeft {
-  background-image: url("https://raw.githubusercontent.com/JOUWNAAM/jellyfin-branding/main/logo.png");
+  background-image: url("https://raw.githubusercontent.com/Masturberen/honingpot-branding/main/logo-light.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
@@ -19,12 +19,21 @@ img[src*="jellyfin"],
   min-height: 48px;
 }
 
+/* Dark mode */
+body.dark .layout-desktop .headerLeft {
+  background-image: url("https://raw.githubusercontent.com/Masturberen/honingpot-branding/main/logo-dark.png");
+}
+
 /* Login pagina */
 .loginPage .logoContainer {
-  background-image: url("https://raw.githubusercontent.com/JOUWNAAM/jellyfin-branding/main/logo.png");
+  background-image: url("https://raw.githubusercontent.com/Masturberen/honingpot-branding/main/logo-light.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+body.dark .loginPage .logoContainer {
+  background-image: url("https://raw.githubusercontent.com/Masturberen/honingpot-branding/main/logo-dark.png");
 }
 
 .loginPage .logoContainer img {
@@ -33,10 +42,14 @@ img[src*="jellyfin"],
 
 /* Sidebar (mobiel/tablet) */
 .navDrawerHeader {
-  background-image: url("https://raw.githubusercontent.com/JOUWNAAM/jellyfin-branding/main/logo.png");
+  background-image: url("https://raw.githubusercontent.com/Masturberen/honingpot-branding/main/logo-light.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+body.dark .navDrawerHeader {
+  background-image: url("https://raw.githubusercontent.com/Masturberen/honingpot-branding/main/logo-dark.png");
 }
 
 .navDrawerHeader img {
